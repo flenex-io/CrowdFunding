@@ -1,18 +1,18 @@
-# Ethereum Room Booking DApp
-
+# Crowdfunding Dapp
 
 ## Description
 
-The Ethereum Room Booking DApp revolutionizes room booking by offering a decentralized solution powered by the Ethereum blockchain. This DApp streamlines the room booking process, providing users with a seamless experience for booking rooms, checking room availability, viewing booked rooms, and checking out.
+Welcome to the Crowdfunding Dapp, a decentralized application that allows users to contribute funds to a crowdfunding campaign. This Dapp provides transparency by displaying the names, timestamps, and wallet addresses of contributors on the website.
 
 ## Demo
 
-Experience the Ethereum Room Booking DApp in action with our live demo [here](https://ethrooms.netlify.app/).
+Experience the Ethereum Room Booking DApp in action with our live demo [here](https://flenex-io.github.io/CrowdFunding/).
 
-## Prerequisites
+### Prerequisites
 
-Before you dive in, make sure you have the following prerequisites:
+Before you can use this Dapp, you'll need the following:
 
-- **Node.js**: Ensure you have Node.js installed.
-- **Metamask**: Install the Metamask browser extension for seamless Ethereum interaction.
-- **Hardhat**: Get Hardhat to compile and deploy smart contracts efficiently.
+- [Node.js](https://nodejs.org/) installed on your local machine.
+- [MetaMask](https://metamask.io/) or another Ethereum wallet extension for your browser.
+- An Ethereum wallet with some ETH for contributing to campaigns.
+- [Hardhat](https://hardhat.org/) for Ethereum smart contract development.

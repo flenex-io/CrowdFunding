@@ -16,3 +16,23 @@ Before you can use this Dapp, you'll need the following:
 - [MetaMask](https://metamask.io/) or another Ethereum wallet extension for your browser.
 - An Ethereum wallet with some ETH for contributing to campaigns.
 - [Hardhat](https://hardhat.org/) for Ethereum smart contract development.
+
+## Getting Started
+
+Follow these steps to get the CrowdFunding Dapp up and running on your local machine:
+
+1. **Clone the Repository:**
+    ```bash
+    git clone https://github.com/flenex-io/CrowdFunding.git
+    cd CrowdFunding
+    ```
+
+2. **Install Dependencies:**
+    ```bash
+    npm install
+    ```
+
+3. **Run the Application:**
+    ```bash
+    npm start
+    ```

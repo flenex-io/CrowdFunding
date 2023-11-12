@@ -16,15 +16,18 @@ Follow these steps to get the CrowdFunding Dapp up and running on your local mac
     ```bash
     git clone https://github.com/flenex-io/CrowdFunding.git
     ```
-    
-    cd CrowdFunding
 
-2. **Install Dependencies:**
+2. **Change the repository**
+   ```bash
+   cd CrowdFunding
+   ```
+
+3. **Install Dependencies:**
     ```bash
     npm install
     ```
 
-3. **Run the Application:**
+4. **Run the Application:**
     ```bash
     npm start
     ```

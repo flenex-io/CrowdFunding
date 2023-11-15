@@ -4,10 +4,6 @@
 
 Welcome to the Crowdfunding Dapp, a decentralized application that allows users to contribute funds to a crowdfunding campaign. This Dapp provides transparency by displaying the names, timestamps, and wallet addresses of contributors on the website.
 
-## Live Site
-
-Experience the CrpwdFunding DApp in action with our live demo [here](https://flenex-io.github.io/CrowdFunding/).
-
 ## Getting Started
 
 Follow these steps to get the CrowdFunding Dapp up and running on your local machine:

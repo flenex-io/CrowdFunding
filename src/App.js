@@ -74,9 +74,7 @@ function App() {
         </h1>
         <h4>A Permanent Repository for Charitable Contributions</h4>
 
-        {/* <div className="Account"> */}
           <p className="App-connection"> <span className="blue">Connected Account:</span> {String(account).toUpperCase()}</p>
-        {/* </div> */}
 
         <Buy state={state} />
         <Contributers state={state} />

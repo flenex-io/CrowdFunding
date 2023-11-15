@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/CrowdFunding/static/css/main.cda1daec.css",
+    "main.js": "/CrowdFunding/static/js/main.85c0e99a.js",
+    "index.html": "/CrowdFunding/index.html",
+    "main.cda1daec.css.map": "/CrowdFunding/static/css/main.cda1daec.css.map",
+    "main.85c0e99a.js.map": "/CrowdFunding/static/js/main.85c0e99a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cda1daec.css",
+    "static/js/main.85c0e99a.js"
+  ]
+}

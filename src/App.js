@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import abi from "./contracts/CrowdFunding.json";
 import { useState, useEffect } from "react";
 import { ethers } from "ethers";
@@ -85,5 +84,3 @@ function App() {
 }
 
 export default App;
-=======
->>>>>>> aa5dd80 (Updated FrontEnd)

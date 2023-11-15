@@ -6,7 +6,7 @@ Welcome to the Crowdfunding Dapp, a decentralized application that allows users 
 
 ## Live Site
 
-Experience the Ethereum Room Booking DApp in action with our live demo [here](https://flenex-io.github.io/CrowdFunding/).
+Experience the CrpwdFunding DApp in action with our live demo [here](https://flenex-io.github.io/CrowdFunding/).
 
 ## Getting Started
 

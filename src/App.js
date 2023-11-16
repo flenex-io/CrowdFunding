@@ -1,5 +1,5 @@
 import abi from "./contracts/CrowdFunding.json";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { ethers } from "ethers";
 import Buy from "./components/Buy";
 import Contributers from "./components/Contributers";
@@ -12,73 +12,68 @@ function App() {
     contract: null,
   });
   const [account, setAccount] = useState("No account connected");
+  const [walletConnected, setWalletConnected] = useState(false);
 
-  useEffect(() => {
-    const connectWallet = async () => {
-      const contractAddress = "0xCCEa6E4A3134726FBb66b90B8145BD126362a1aD";
-      const contractABI = abi.abi;
-      try {
-        const { ethereum } = window;
+  const connectWallet = async () => {
+    const contractAddress = "0x1B3266C6727550f9B332Ec2f95B526c680Fc9bC0";
+    const contractABI = abi.abi;
+    try {
+      const { ethereum } = window;
 
-        if (ethereum) {
-          const account = await ethereum.request({
-            method: "eth_requestAccounts",
-          });
+      if (ethereum) {
+        const account = await ethereum.request({
+          method: "eth_requestAccounts",
+        });
 
-          window.ethereum.on("chainChanged", () => {
-            window.location.reload();
-          });
+        window.ethereum.on("chainChanged", () => {
+          window.location.reload();
+        });
 
-          window.ethereum.on("accountsChanged", () => {
-            window.location.reload();
-          });
+        window.ethereum.on("accountsChanged", () => {
+          window.location.reload();
+        });
 
-          const provider = new ethers.providers.Web3Provider(ethereum);
-          const signer = provider.getSigner();
-          const contract = new ethers.Contract(
-            contractAddress,
-            contractABI,
-            signer
-          );
-          setAccount(account);
-          setState({ provider, signer, contract });
-        } else {
-          alert("Please install metamask");
-        }
-      } catch (error) {
-        console.log(error);
+        const provider = new ethers.providers.Web3Provider(ethereum);
+        const signer = provider.getSigner();
+        const contract = new ethers.Contract(
+          contractAddress,
+          contractABI,
+          signer
+        );
+        setAccount(account);
+        setState({ provider, signer, contract });
+        setWalletConnected(true);
+      } else {
+        alert("Please install metamask");
       }
-    };
-    connectWallet();
-  }, []);
-
-  const checkConnectedWallet = async () => {
-    const { ethereum } = window;
-    if (ethereum && ethereum.selectedAddress) {
-      const provider = new ethers.providers.Web3Provider(ethereum);
-      const signer = provider.getSigner();
-      const connectedAccount = await signer.getAddress();
-      setState({ provider, signer, connectedAccount });
+    } catch (error) {
+      console.log(error);
     }
   };
 
-  useEffect(() => {
-    checkConnectedWallet();
-  }, []);
-
   return (
-    <div className="App">
-      <div className="App-header">
-        <h1>
-          Crowd<span className="blue">Funding</span>
-        </h1>
-        <h4>A Permanent Repository for Charitable Contributions</h4>
+    <div>
+      {walletConnected ? (
+        <div className="App">
+          <div className="App-header">
+            <h1>
+              Crowd<span className="blue">Funding</span>
+            </h1>
+            <h4>A Permanent Repository for Charitable Contributions</h4>
 
-          <p className="App-connection"> <span className="blue">Connected Account:</span> {String(account).toUpperCase()}</p>
+            <p className="App-connection">
+              {" "}
+              <span className="blue">Connected Account:</span>{" "}
+              {String(account).toUpperCase()}
+            </p>
 
-        <Buy state={state} />
-        <Contributers state={state} />
-      </div>
+            <Buy state={state} />
+            <Contributers state={state} />
+          </div>
+        </div>
+      ) : (
+        <button onClick={connectWallet}>Connect Wallet</button>
+      )}
     </div>
   );
 }

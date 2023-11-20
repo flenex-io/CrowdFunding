@@ -4,6 +4,8 @@
 
 Welcome to the Crowdfunding Dapp, a decentralized application that allows users to contribute funds to a crowdfunding campaign. This Dapp provides transparency by displaying the names, timestamps, and wallet addresses of contributors on the website.
 
+You can access the live site of the Crowdfunding Dapp here[https://flx-crowdfunding-dapp.netlify.app/]
+
 ## Getting Started
 
 Follow these steps to get the CrowdFunding Dapp up and running on your local machine:

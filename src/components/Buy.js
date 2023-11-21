@@ -47,7 +47,7 @@ const Buy = ({ state }) => {
     <>
       <div className="App-button-box">
         <h6>Raising Amount: 30 ETH</h6>
-        <h6>Raised Amount: {raisedAmount}</h6>
+        <h6>Amount you donated: {raisedAmount}</h6>
         {loading && <div className="loading-animation"></div>}
         <form onSubmit={sendDonation}>
           <div className="mb-3">

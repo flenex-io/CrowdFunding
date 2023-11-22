@@ -30,3 +30,4 @@ Follow these steps to get the CrowdFunding Dapp up and running on your local mac
     ```bash
     npm start
     ```
+## Open For Contributions

@@ -59,13 +59,14 @@ function App() {
             <h1>
               Crowd<span className="blue">Funding</span>
             </h1>
-            <h4>A Permanent Repository for Charitable Contributions</h4>
+            <h3>A Permanent Repository for Charitable Contributions</h3>
 
             <p className="App-connection">
               {" "}
               <span className="blue">Connected Account:</span>{" "}
               {String(account).toUpperCase()}
             </p>
+            <br/>
 
             <Buy state={state} />
             <Contributers state={state} />

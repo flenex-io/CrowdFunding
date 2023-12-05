@@ -26,15 +26,15 @@ body {
   color: var(--text-color);
 }
 
-h5{
+h5 {
   font-size: 15px;
 }
 
-h3{
+h3 {
   margin: 0 0 15px 0;
 }
 
-a{
+a {
   list-style: none;
   text-decoration: none;
 }
@@ -46,12 +46,6 @@ a{
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   background-color: var(--darker-bg);
   margin: auto;
-}
-
-.donation-heading {
-  text-align: center;
-  color: var(--text-color);
-  margin-bottom: 20px;
 }
 
 .donation-form {
@@ -106,7 +100,7 @@ a{
 .contri {
   background-color: #3f4756;
   border: 2px solid var(--border-color);
-  padding: 1px; 
+  padding: 1px;
   border-radius: 5px;
   color: #e5e5e5;
 }
@@ -115,7 +109,6 @@ a{
   font-size: 17px;
   margin: 1.7px 0;
 }
-
 
 .App {
   display: flex;

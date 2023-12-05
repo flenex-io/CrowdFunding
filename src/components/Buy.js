@@ -45,27 +45,39 @@ const Buy = ({ state }) => {
 
   return (
     <>
-      <div className="App-button-box">
-        <h6>Raising Amount: 30 ETH</h6>
-        <h6>Amount you donated: {raisedAmount}</h6>
-        {loading && <div className="loading-animation"></div>}
-        <form onSubmit={sendDonation}>
-          <div className="mb-3">
-            <input type="text" id="name" placeholder="Enter Your Name" />
-            <input
-              type="number"
-              id="number"
-              placeholder="Enter The Amount"
-              value={donationAmount}
-              onChange={handleDonationChange}
-              step={0.01}
-              defaultValue={0.01}
-            />
-          </div>
-          <button type="submit" disabled={!state.contract}>
-            Pay
-          </button>
-        </form>
+      <div className="donation-container">
+        <div className="App-button-box">
+          <h5>Raising Amount: 30 ETH</h5>
+          <h5>Amount you donated: {raisedAmount}</h5>
+          {loading && <div className="loading-animation"></div>}
+          <form onSubmit={sendDonation} className="donation-form">
+            <div className="input-group">
+              <input
+                type="text"
+                id="name"
+                placeholder="Enter Your Name"
+                className="input-field"
+              />
+              <input
+                type="number"
+                id="number"
+                placeholder="Enter The Amount"
+                value={donationAmount}
+                onChange={handleDonationChange}
+                step={0.01}
+                defaultValue={0.01}
+                className="input-field"
+              />
+            </div>
+            <button
+              type="submit"
+              disabled={!state.contract}
+              className="donate-button"
+            >
+              Pay
+            </button>
+          </form>
+        </div>
       </div>
     </>
   );

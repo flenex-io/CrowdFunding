@@ -19,21 +19,24 @@ const Contributers = ({ state }) => {
     fetchData();
   }, [contract]);
 
-
   return (
     <div className="contri-container">
       <h2>Contributers</h2>
-      {contributers.map((contributers, index) => (
-        <div className="contri" key={index}>
-          <p>Name: {contributers.name}</p>
-          <p>
-            Time: {new Date(contributers.timestamp * 1000).toLocaleString()}
-          </p>
-          <p>
-            From: {contributers.from.slice(0, 4).toUpperCase()}...
-            {contributers.from.slice(-4).toUpperCase()}
-          </p>
-        </div>
+      {contributers.map((contributor, index) => (
+        <a
+          href={`https://sepolia.etherscan.io/address/${contributers[index].from}`}
+        >
+          <div className="contri" key={index}>
+            <p>Name: {contributor.name}</p>
+            <p>
+              Time: {new Date(contributor.timestamp * 1000).toLocaleString()}
+            </p>
+            <p>
+              From: {contributor.from.slice(0, 4).toUpperCase()}...
+              {contributor.from.slice(-4).toUpperCase()}
+            </p>
+          </div>
+        </a>
       ))}
     </div>
   );

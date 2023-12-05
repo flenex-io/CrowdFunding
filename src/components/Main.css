@@ -1,3 +1,18 @@
+:root {
+  --dark-bg: #1f1f1f;
+  --darker-bg: #333;
+  --input-bg: #444;
+  --border-color: #666;
+  --button-primary: #007bff;
+  --button-hover: #0056b3;
+  --text-color: #fff;
+  --text-muted: #ccc;
+  --light-bg: #f5f5f5;
+  --accent-color: #ff6347;
+  --secondary-color: #6b8e23;
+  --highlight-color: #ffcc00;
+}
+
 * {
   margin: 0;
   padding: 10px;
@@ -5,65 +20,83 @@
 }
 
 body {
+  margin: 0;
+  background-color: var(--dark-bg);
   font-family: Arial, sans-serif;
-  background-color: #282c34;
-  color: #e5e5e5;
-  font-weight: 600;
+  color: var(--text-color);
 }
 
-h4 {
-  margin: 3% 0;
+h5{
+  font-size: 15px;
 }
 
-p {
+h3{
+  margin: 0 0 15px 0;
+}
+
+a{
+  list-style: none;
+  text-decoration: none;
+}
+
+.donation-container {
+  width: 400px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  background-color: var(--darker-bg);
+  margin: auto;
+}
+
+.donation-heading {
+  text-align: center;
+  color: var(--text-color);
   margin-bottom: 20px;
 }
 
-.App {
-  text-align: center;
+.donation-form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: calc(10px + 2vmin);
-  color: #e5e5e5;
+  width: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.input-group {
+  margin-bottom: 10px;
+  width: 100%;
 }
 
-.blue {
-  color: #4ebfdf;
+.input-field {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 3px;
+  box-sizing: border-box;
+  background-color: var(--input-bg);
+  color: var(--text-color);
+  font-size: 15px;
 }
 
-.App-button-box {
-  border: 2px solid #444;
-  background-color: #272a31;
-  border-radius: 7px;
-  width: 400px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 10px;
+.donate-button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--button-primary);
+  color: var(--text-color);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.Account {
-  border: 2px solid #444;
-  background-color: #272a31;
-  border-radius: 7px;
-  margin-bottom: 2%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.donate-button:hover {
+  background-color: var(--button-hover);
 }
 
 .contri-container {
   margin-top: 25px;
   text-align: center;
-  border: 2px solid #444;
+  border: 2px solid var(--border-color);
   background-color: #272a31;
   padding: 20px;
   border-radius: 7px;
@@ -72,107 +105,42 @@ p {
 
 .contri {
   background-color: #3f4756;
-  border: 2px solid #444;
-  padding: 10px;
-  margin: 10px 0;
+  border: 2px solid var(--border-color);
+  padding: 1px; 
   border-radius: 5px;
-  text-align: left;
   color: #e5e5e5;
 }
 
 .contri p {
-  font-size: 20px;
-  margin: 0.1px 0;
+  font-size: 17px;
+  margin: 1.7px 0;
 }
 
-@media screen and (max-width: 768px) {
-  .contri-container {
-    width: 95%;
-    padding: 10px;
-  }
 
-  .contri {
-    padding: 8px;
-    font-size: 0.8em;
-  }
-
-  h4 {
-    width: 350px;
-  }
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-button {
-  width: 150px;
-  height: 40px;
-  font-weight: 900;
-  border: none;
-  border-radius: 20px;
-  background: #4ebfdf;
-  color: #e5e5e5;
-  cursor: pointer;
-  margin: 10px 0;
-  transition: background-color 0.3s ease-in-out;
+.App-header {
+  text-align: center;
 }
 
-button:hover {
-  background: #4477a1;
+.App h1 {
+  color: var(--text-color);
+  font-size: 32px;
 }
 
-input[type="text"],
-input[type="number"] {
-  width: 80%;
-  height: 40px;
-  padding: 10px;
-  border: 2px solid #444;
-  border-radius: 5px;
-  margin: 10px 0;
-  font-size: 16px;
-  transition: border-color 0.3s ease-in-out;
-  background: #282c34;
-  color: #e5e5e5;
+.App h1 .blue {
+  color: var(--button-primary);
 }
 
-input[type="text"]:focus {
-  border-color: #4ebfdf;
+.App h4 {
+  color: var(--text-muted);
+  margin-bottom: 20px;
 }
 
 .App-connection {
-  font-size: 0.6em;
-  margin-top: 10px;
-}
-
-@media screen and (max-width: 768px) {
-  .App-button-box {
-    width: 100%;
-  }
-  .App-body {
-    width: 335px;
-  }
-
-  button {
-    width: 95px;
-    height: 40px;
-    font-weight: 900;
-    border: none;
-    border-radius: 20px;
-    background: #4ebfdf;
-    color: #e5e5e5;
-    cursor: pointer;
-    margin: 1px 0;
-    transition: background-color 0.3s ease-in-out;
-  }
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-.loading-animation {
-  border: 4px solid rgba(0, 0, 0, 0.1);
-  border-top: 4px solid #e5e5e5;
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  animation: spin 1s linear infinite;
+  color: var(--text-color);
 }

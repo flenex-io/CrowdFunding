@@ -66,14 +66,18 @@ function App() {
               <span className="blue">Connected Account:</span>{" "}
               {String(account).toUpperCase()}
             </p>
-            <br/>
+            <br />
 
             <Buy state={state} />
             <Contributers state={state} />
           </div>
         </div>
       ) : (
-        <button onClick={connectWallet}>Connect Wallet</button>
+        <div class="centered-container">
+          <button class="click" onClick={connectWallet}>
+            Connect Wallet
+          </button>
+        </div>
       )}
     </div>
   );

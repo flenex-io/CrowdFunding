@@ -35,14 +35,13 @@ const Buy = ({ state }) => {
       const transaction = await contract.sendDonation(name, amount);
       await transaction.wait();
 
-      setLoading(false); // Stop the loading animation on successful transaction
+      setLoading(false);
       alert("Transaction done");
       localStorage.setItem("raisedAmount", updatedAmount.toString());
       setRaisedAmount(updatedAmount);
     } catch (error) {
-      setLoading(false); // Stop the loading animation on transaction failure
+      setLoading(false);
       console.error("Transaction failed:", error.message);
-      // You can add additional error handling here if needed
       alert("Transaction failed. Please try again.");
     }
   };

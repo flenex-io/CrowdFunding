@@ -26,17 +26,25 @@ const Buy = ({ state }) => {
       return;
     }
 
-    const parsedAmount = ethers.utils.parseEther(donationAmount.toString());
-    const amount = { value: parsedAmount };
+    try {
+      const parsedAmount = ethers.utils.parseEther(donationAmount.toString());
+      const amount = { value: parsedAmount };
 
-    const updatedAmount = raisedAmount + parseFloat(donationAmount);
+      const updatedAmount = raisedAmount + parseFloat(donationAmount);
 
-    const transaction = await contract.sendDonation(name, amount);
-    await transaction.wait();
-    setLoading(false);
-    alert("Transaction done");
-    localStorage.setItem("raisedAmount", updatedAmount.toString());
-    setRaisedAmount(updatedAmount);
+      const transaction = await contract.sendDonation(name, amount);
+      await transaction.wait();
+
+      setLoading(false); // Stop the loading animation on successful transaction
+      alert("Transaction done");
+      localStorage.setItem("raisedAmount", updatedAmount.toString());
+      setRaisedAmount(updatedAmount);
+    } catch (error) {
+      setLoading(false); // Stop the loading animation on transaction failure
+      console.error("Transaction failed:", error.message);
+      // You can add additional error handling here if needed
+      alert("Transaction failed. Please try again.");
+    }
   };
 
   const handleDonationChange = (event) => {

@@ -59,7 +59,7 @@ function App() {
             <h1>
               Crowd<span className="blue">Funding</span>
             </h1>
-            <h3>A Permanent Repository for Charitable Contributions</h3>
+            <h3>Contribute to the society with the new blockchain technology</h3>
 
             <p className="App-connection">
               {" "}

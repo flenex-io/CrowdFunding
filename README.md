@@ -1,7 +1,6 @@
 # Crowdfunding Dapp
 
 ![Image 1](./src/images/1.png)
-![Image 2](./src/images/2.png)
 
 ## Description
 

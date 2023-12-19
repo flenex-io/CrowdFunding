@@ -1,5 +1,8 @@
 # Crowdfunding Dapp
 
+![Image 1](./src/images/1.png)
+![Image 2](./src/images/2.png)
+
 ## Description
 
 Welcome to the Crowdfunding Dapp, a decentralized application that allows users to contribute funds to a crowdfunding campaign. This Dapp provides transparency by displaying the names, timestamps, and wallet addresses of contributors on the website.
